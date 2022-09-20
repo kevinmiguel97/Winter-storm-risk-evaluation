@@ -98,10 +98,10 @@ def plot_boxes(data, rows, cols, title=''):
 #//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 def calculate_age(data, date_col):
     # Generate age
-    today = pd.Timestamp(dt.date.today())                                                                # Get today's date
-    data[date_col] = pd.to_datetime(data[date_col], infer_datetime_format=True)   # Convert column into datetime
-    data[date_col] = pd.to_datetime(data[date_col], infer_datetime_format=True)   # Convert column into datetime
-    data['age'] = data[date_col].apply(lambda x: (today - pd.Timestamp(x)).days)         # Calculate dif between dates
+    today = pd.Timestamp(dt.date.today())                                           # Get today's date
+    data[date_col] = pd.to_datetime(data[date_col], infer_datetime_format=True)     # Convert column into datetime
+    data[date_col] = pd.to_datetime(data[date_col], infer_datetime_format=True)     # Convert column into datetime
+    data['age'] = data[date_col].apply(lambda x: (today - pd.Timestamp(x)).days)    # Calculate dif between dates
     data['age'] = round(data['age'] / 365, 0)                                                   # Convert into years
     data['age'] = data['age'].astype(int)                                                       # Convert column into integer
     data = data.drop(columns=[date_col])                                           # Drop date of birth and id column  
