@@ -107,3 +107,29 @@ def calculate_age(data, date_col):
     data = data.drop(columns=[date_col])                                           # Drop date of birth and id column  
 
     return data
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+def standarize(data): 
+    """
+    This function  standarizes the values of our datasets
+    
+    Parameters:
+    ------------
+    data : dataframe
+        Dataset to transform
+    
+    Returns:
+    --------
+    dataframe
+        A dataframe with the data standarized on the selected columns
+    """
+
+    # Rescaling selected attributed
+    scaler = MinMaxScaler()                         # Create scaler object 
+    scaler.fit(data)                                # Fit the data
+    scalers = pd.DataFrame(scaler.transform(data))  # Transform data
+    scalers.columns = data.columns                  # Rename columns for scaled frame
+    scalers
+    data = scalers
+
+    return scalers
