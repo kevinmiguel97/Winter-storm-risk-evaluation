@@ -44,7 +44,7 @@ def summary_stats(data, title):
     return df_var_summary
 
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-def plot_piechart(data, column, colors = None): 
+def plot_piechart(data, column, title = 'Piechart', colors = None): 
     import pandas as pd
     """
     Generates a pieplot
@@ -67,7 +67,7 @@ def plot_piechart(data, column, colors = None):
     fig.set_size_inches(3.5,3.5)
     circle = plt.Circle(xy=(0,0), radius=1, facecolor='White')
     plt.gca().add_artist(circle)
-    ax.set_title('Distribution of portfolios', y=0.45)
+    ax.set_title(title, y=0.45)
 
     return None
 
