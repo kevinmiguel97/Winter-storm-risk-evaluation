@@ -16,6 +16,6 @@ ________________________________________________________________________________
 
 - ### [Exhibits workbook](https://github.com/kevinmiguel97/Winter-storm-risk-evaluation/blob/main/Exhibits%20%20KCC.xlsx)
 
-- ### [Methodologic report & Questions]()
+- ### [Methodologic report & Questions](https://github.com/kevinmiguel97/Winter-storm-risk-evaluation/blob/main/Report%20KCC.ipynb)
 
 - ### [Library of functions created](https://github.com/kevinmiguel97/Winter-storm-risk-evaluation/blob/main/kcc_functions.py)
